@@ -1,0 +1,163 @@
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css
+
+<div id="slider">
+<figure>
+<<div id="iefix">
+<img src="csmt.jpg" height="500" >
+<img src="10.jpg" height="500">
+<img src="2.jpg" height="500">
+<img src="train3.jpg" height="500">
+<img src="train2.jpg" height="500">
+</div>
+</figure>
+
+</div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"
+type="text/javascript"></script>
+
+<style type="text/css">
+@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+
+#feedControl {
+margin-top : 10px;
+margin-left: auto;
+margin-right: auto;
+width : 440px;
+font-size: 12px;
+color: #9CADD0;
+}
+</style>
+<script type="text/javascript">
+function load() {
+var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
+new GFdynamicFeedControl(feed, "feedControl");
+
+}
+google.load("feeds", "1");
+oogle.setOnLoadCallback(load);
+</script>
+<img class="slides" src="12.jpg" height="450px" width="80%";/>
+<img class="slides" src="13.jpg" height="450px" width="80%";/>
+<img class="slides" src="16.jpg" height="450px" width="80%";/>
+@keyframes slider{
+	0%{
+		left:0;
+		
+	}
+	20%{
+		left:0;
+	}
+	25%{
+		left:-100%;
+		
+	}
+	45%{
+		left:-100%;
+		
+	}
+	50%{
+		left:-200%;
+		
+	}
+	70%{
+		left:-200%;
+		
+	}
+	75%{
+		left:-300%;
+		
+	}
+	95%{
+		left:-400%;
+	}
+	100%{
+		left:-400%
+		
+	}
+}
+	#slider{
+		overflow:hidden;
+		
+	}
+	#slider figure img{
+		width:20%;
+		float:left;
+	}
+	#slider figure{
+		position:relative;
+		width:500%;
+		margin:0;
+		left:0;
+		text-align:left;
+		font-size:0;
+		animation:20s slider infinite;
+		
+	}
+#iefix {
+position:relative;
+z-index:1000;
+}
+#text{
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+<font color="red">
+ABOUT US
+</font>
+<script>
+var index=1;
+function plusIndex(n){
+index=index+1;
+showImage(index);
+}
+showImage(1);
+function showImage(n){
+var i;
+var x=document.getElementsByClassName("slides");
+if(n>x.length){index=1};
+if(n<1){index=x.length};
+for(i=0;i<x.length;i++)
+{
+x[i].style.display="none";
+}
+x[index-1].style.display="block";
+setTimeout(showImage,2000);
+}
+</script>
+
+
+<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+
+
+
+<div class="name1">
+<p align="left">
+CRCA is formed to promote cultural activities on Central Railway.The General Manager Central Railway is the Patron of the Academy. 
+<br>
+<br>
+The Academy Council comprises of Office Bearers of the Headquarters and representatives from all 5 divisions on Central Railway viz. Mumbai, Pune, Solapur, Bhusawal, Nagpur and Production Units/Workshops at Byculla, Parel, Matunga, Kurudwadi, Nasik Road and Manmad. It is the governing body of the CRCA which will advise and lay down the policy for guidance of the Central Executive Committee.
+<br>
+<br>
+</p>
+</div>
+<link rel="stylesheet" href="style3.css" type="text/css">
+<div class="form-content">
+<div class="module">
+<h1>Create your account</h1>
+<form class="form" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off">
+<div class="alert alert-error"><?= $_SESSION['message'] ?></div>
+<input type="text" placeholder="User Name" name="username" required/>
+<input type="email" placeholder="Email" name="email" required/>
+<input type="password" placeholder="Password" name="password" autocomplete="new-password" required/>
+<input type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required/>
+<input type="submit" value="Register" name="register" class="btn btn-block btn-primary" />
+</form>
+</div>
+</div>
+
+<input type="submit"  value="Insert New Events">
